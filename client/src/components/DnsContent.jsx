@@ -17,7 +17,7 @@ const DnsContent = () => {
   const handleClick = async () => {
     try {
       // Send a POST request to the backend API with the DNS record data
-      await axios.post("http://localhost:4545/api/save", dnsRecord);
+      await axios.post("https://domain-name-five.vercel.app/api/save", dnsRecord);
       // Reset the DNS record state
       setDnsRecord({
         type: "",
@@ -43,7 +43,7 @@ const DnsContent = () => {
   const fetchDnsRecords = async () => {
     try {
       // Fetch DNS records from the backend API
-      const response = await axios.get("http://localhost:4545/api/dns");
+      const response = await axios.get("https://domain-name-five.vercel.app/api/dns");
       console.log(response);
       // Update the dnsRecords state with the fetched records
       setDnsRecords(response.data);
@@ -72,7 +72,7 @@ const DnsContent = () => {
 
   const handleDelete = async (recordId) => {
     try {
-      await axios.delete(`http://localhost:4545/api/dns/${recordId}`);
+      await axios.delete(`https://domain-name-five.vercel.app/api/dns/${recordId}`);
       // If deletion is successful, fetch updated DNS records
       fetchDnsRecords();
       // Provide feedback to the user about the success of the delete operation

@@ -31,6 +31,10 @@ app.get('/getData', (req, res) =>{
 app.use(dns);
 app.use(user);
 
+app.get('*', (req, res) => {
+    res.send('Backend is running');
+});
+
 const PORT = 4545 || process.env.PORT;
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {

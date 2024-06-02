@@ -14,7 +14,7 @@ const DnsEdit = ({ record, onClose, fetchDnsRecords }) => {
       // Send edit request to the backend API
       console.log(editedRecord);
       const response = await axios.put(
-        `http://localhost:4545/api/dns/${editedRecord._id}`,
+        `https://domain-name-five.vercel.app/api/dns/${editedRecord._id}`,
         editedRecord
       );
     

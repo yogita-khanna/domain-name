@@ -18,7 +18,7 @@ const Signup = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:4545/user/register",
+        "https://domain-name-five.vercel.app/user/register",
         { username: name, email: email, password: Pw }  // Use correct field names
       );
       console.log(response.data);
