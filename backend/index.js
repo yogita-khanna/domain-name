@@ -24,7 +24,7 @@ app.use(cors())
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-app.get('/getData', (req, res) =>{
+app.get('/', (req, res) =>{
     res.json([1,2,3,4,5])
 })
 
